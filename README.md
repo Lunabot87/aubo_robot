@@ -63,7 +63,7 @@ Make sure to source the correct setup file according to your workspace hierarchy
 
 4.ROS Gazebo plugin install
 
-  >sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
+  >```sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control```
 
 -First build "aubo_msgs" package  
 
