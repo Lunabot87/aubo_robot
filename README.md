@@ -20,6 +20,49 @@ First set up a catkin workspace (see [this tutorials](http://wiki.ros.org/catkin
 Then clone the repository into the src/ folder. It should look like /path/to/your/catkin_workspace/src/aubo_robot.  
 Make sure to source the correct setup file according to your workspace hierarchy, then use ```catkin_make``` to compile.
 
+-Must depend package installed Moveit! & Moveit plugin  
+1. Install Moveit
+
+  >```rosdep update```  
+  >```sudo apt-get update```  
+  >```sudo apt-get dist-upgrade```  
+
+  >```sudo apt-get install python-wstool python-catkin-tools clang-format-3.8```  
+
+  >```cd```  
+  ```mkdir ~/ws_moveit```  
+  ```cd ~/ws_moveit```
+
+  >```wstool init src```  
+  ```wstool merge -t src https://raw.githubusercontent.com/ros-planning/moveit/kinetic-devel/moveit.rosinstall```  
+  ```wstool update -t src```  
+  ```rosdep install -y --from-paths src --ignore-src --rosdistro kinetic```  
+  ```catkin config --extend /opt/ros/kinetic --cmake-args -DCMAKE_BUILD_TYPE=Release```  
+  ```catkin build```  
+
+  >Setup your environment - you can do this every time you work with this particular source install of the code, or you can add this to your .bashrc:  
+
+  >```source ~/ws_moveit/devel/setup.bash # or .zsh, depending on your shell```  
+
+  >After Build finsh remove bash "source ~/ws_moveit/devel/setup.bash"
+
+  >site : http://moveit.ros.org/install/source/  
+
+2.Install ros-kinetic-moveit  
+
+  >```sudo apt-get install ros-kinetic-moveit``` 
+  ```source /opt/ros/kinetic/setup.bash```
+
+  >site :  http://moveit.ros.org/install/  
+
+3.Install moveit_plugin  
+
+  >https://github.com/ros-planning/moveit.git  
+
+-First build "aubo_msgs" package  
+>    ex) remove aubo_robot package except aubo_msgs & catkin_make  
+         restore aubo_robot package & catkin_make
+
 If there is  a linking dependency in aubo_driver with libev library. To solve it it is necessary to install it: 
 ```sudo apt-get install libev-dev```
 
