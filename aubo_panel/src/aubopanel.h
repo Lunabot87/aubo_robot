@@ -1,12 +1,14 @@
 #ifndef AUBO_PANEL_H
 #define AUBO_PANEL_H
 
+#ifndef Q_MOC_RUN
 #include  <ros/ros.h>
 #include  <rviz/panel.h>
 #include  <sensor_msgs/JointState.h>
 #include  <std_msgs/Float32MultiArray.h>
 #include  <aubo_msgs/IOState.h>
 #include  <aubo_msgs/GoalPoint.h>
+#endif
 #include  <QWidget>
 #include  <QTimer>
 

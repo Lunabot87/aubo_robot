@@ -26,7 +26,8 @@ int goal_trajectory(double *road)
 
   moveit::planning_interface::MoveGroup::Plan my_plan;
 
-  bool success = ptr_group->plan(my_plan);
+  bool success = (ptr_group -> plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+  //bool success = ptr_group->plan(my_plan);
 
   ROS_INFO("Visualizing plan 1 (joint space goal) %s",success?"":"FAILED");
 
