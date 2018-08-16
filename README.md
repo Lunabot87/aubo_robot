@@ -57,9 +57,9 @@ Make sure to source the correct setup file according to your workspace hierarchy
 
 3.Install moveit_plugin  
 
-  >cd ~/catkin_ws/src  
-  git clone https://github.com/ros-planning/moveit.git  
-  cd catkin_ws & catkin_make
+  >```cd ~/catkin_ws/src```  
+  ```git clone https://github.com/ros-planning/moveit.git```  
+  ```cd catkin_ws & catkin_make```
 
 4.ROS Gazebo plugin install
 
