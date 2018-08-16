@@ -57,9 +57,16 @@ Make sure to source the correct setup file according to your workspace hierarchy
 
 3.Install moveit_plugin  
 
-  >https://github.com/ros-planning/moveit.git  
+  >cd ~/catkin_ws/src  
+  git clone https://github.com/ros-planning/moveit.git  
+  cd catkin_ws & catkin_make
+
+4.ROS Gazebo plugin install
+
+  >sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
 
 -First build "aubo_msgs" package  
+
 >    ex) remove aubo_robot package except aubo_msgs & catkin_make  
          restore aubo_robot package & catkin_make
 
