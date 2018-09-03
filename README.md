@@ -21,7 +21,7 @@ Then clone the repository into the src/ folder. It should look like /path/to/you
 Make sure to source the correct setup file according to your workspace hierarchy, then use ```catkin_make``` to compile.
 
 -Must depend package installed Moveit! & Moveit plugin  
-1. Install Moveit
+1.Install Moveit
 
   >```rosdep update```  
   >```sudo apt-get update```  
@@ -47,7 +47,7 @@ Make sure to source the correct setup file according to your workspace hierarchy
   >After Build finsh remove bash "source ~/ws_moveit/devel/setup.bash"
 
   >site : http://moveit.ros.org/install/source/  
-
+  
 2.Install ros-kinetic-moveit  
 
   >```sudo apt-get install ros-kinetic-moveit``` 
